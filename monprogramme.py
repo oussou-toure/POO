@@ -8,6 +8,14 @@ class Person:
     def greet(self):
         print("Hello, my name is", self.name)
 
+    def get_age(self):
+        return self.__age
+    def set_age(self, age):
+        if age < 0:
+            print("Age cannot be negative")
+        else:
+            self.__age = age
+
 #Inheritance
 class Student(Person):
     def __init__(self, name, age, major):
