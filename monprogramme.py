@@ -16,3 +16,11 @@ class Student(Person):
     
     def study(self):
         print(self.name, "is studying", self.major)
+
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+        
+    def teach(self):
+        print(self.name, "is teaching", self.subject)
